@@ -1,12 +1,13 @@
 import { HomeIcon, File, UsersRound } from "lucide-react"
 import Link from "next/link"
-
+import styles from "../../repairshop/app/style.module.css"
 import { NavButton } from "@/components/NavButton"
+import { ModeToggle } from "@/components/ModeToggle"
 
 
 export function Header() {
     return (
-        <header className="animate-slide bg-background h-12 p-2 border-b sticky top-0 z-20">
+        <header className={`${styles.animateSlide} bg-background h-12 p-2 border-b sticky top-0 z-20`}>
 
             <div className="flex h-8 items-center justify-between w-full">
 
@@ -24,6 +25,8 @@ export function Header() {
                     <NavButton href="/tickets" label="tickets" icon={File} />
 
                     <NavButton href="/customers" label="customers" icon={UsersRound} />
+
+                    <ModeToggle />
 
                 </div>
 
