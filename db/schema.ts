@@ -6,8 +6,8 @@ import { title } from "process";
 
 export const customers = pgTable("customers", {
     id:serial("id").primaryKey(),
-    first_name:varchar("first_name").notNull(),
-    last_name:varchar("last_name").notNull(),
+    firstName:varchar("first_name").notNull(),
+    lastName:varchar("last_name").notNull(),
     email:varchar("email").unique().notNull(),
     phone:varchar("phone").unique().notNull(),
     address1:varchar("address1").notNull(),
